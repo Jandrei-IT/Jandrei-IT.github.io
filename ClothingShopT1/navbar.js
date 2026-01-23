@@ -4,11 +4,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const logoutLink = document.getElementById("logoutLink");
     const logoutBtn = document.getElementById("logoutBtn");
 
-    // Check login state
+    
     const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
 
     if (isLoggedIn) {
-        // User is logged in → show Profile & Logout, hide Login
+        
         loginLink.style.display = "none";
         profileLink.style.display = "inline-block";
         logoutLink.style.display = "inline-block";
@@ -26,4 +26,5 @@ document.addEventListener("DOMContentLoaded", () => {
         window.location.href = "index.html"; // redirect to home after logout
     });
 });
+
 
