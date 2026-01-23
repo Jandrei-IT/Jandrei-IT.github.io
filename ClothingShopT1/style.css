@@ -146,7 +146,13 @@ footer {
   text-align: center;
   padding: 10px;
 }
-.btn-logout { background-color: #a9a9a9; /* red */ color: white; padding: 10px 20px; border: none; border-radius: 5px; }
+.btn-logout { 
+  background-color: #a9a9a9;  
+  color: white; 
+  padding: 10px 20px; 
+  border: none; 
+  border-radius: 5px; }
+
 .btn-logout:hover { background-color: #000000; }
 footer {
   background: #000000;
@@ -154,7 +160,7 @@ footer {
   text-align: center;
   padding: 10px;
 }
-/* Container for signup text */
+
 .submit-text {
   font-family: Arial, sans-serif;
   font-size: 14px;
@@ -237,3 +243,4 @@ footer {
     height: 120px;
   }
 }
+
