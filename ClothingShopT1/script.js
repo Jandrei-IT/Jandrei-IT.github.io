@@ -5,7 +5,7 @@ form.addEventListener("submit", function(event) { event.preventDefault();
      const navbar = document.getElementById("navbar");
 
   function login() {
-    // Add Profile link if not already present
+    
     if (!document.getElementById("profileLink")) {
       const profileItem = document.createElement("li");
       profileItem.innerHTML = '<a href="userprofile.html" id="profileLink">Profile</a>';
@@ -15,10 +15,11 @@ form.addEventListener("submit", function(event) { event.preventDefault();
   }
 
   function logout() {
-    // Remove Profile link if it exists
+    
     const profileLink = document.getElementById("profileLink");
     if (profileLink) {
       profileLink.parentElement.remove();
     }
     alert("You are logged out. Profile link is hidden.");
+
   }
