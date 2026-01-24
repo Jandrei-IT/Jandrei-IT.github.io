@@ -189,66 +189,88 @@ footer {
 
 
 /* Responsive adjustments */
+/* 📱 Mobile Devices */
 @media (max-width: 768px) {
 
+  body {
+    font-size: 16px;
+  }
+
+  /* Header */
   header {
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    position: relative;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px;
   }
 
   header .logo {
-    height: 80px;
-    margin: 0 10px 0 0;
+    height: 70px;
+    margin: 0;
   }
 
+  /* Layout */
   .container {
     flex-direction: column;
   }
 
+  /* Sidebar */
   .sidebar {
     width: 100%;
     text-align: center;
+    padding: 10px;
   }
 
   .sidebar ul li {
     margin: 5px 0;
   }
 
+  .sidebar ul li a {
+    padding: 10px;
+  }
+
+  /* Main content */
+  main {
+    padding: 15px;
+  }
+
+  /* Products grid */
   .products {
     justify-content: center;
   }
 
   .product {
-    width: calc(50% - 20px);
-  }
-}
-
-@media (max-width: 480px) {
-
-  .product {
-    width: 100%;
+    width: 100%;   /* one product per row */
   }
 
+  .product img {
+    height: 180px;
+  }
+
+  /* Profile image */
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+  }
+
+  /* Forms */
   form {
     width: 90%;
-    margin: 20px auto;
-    padding: 15px;
+    margin: 30px auto;
   }
 
-  button {
+  /* Buttons */
+  button,
+  .btn,
+  .btn-logout {
     width: 100%;
-    font-size: 14px;
+    margin-top: 10px;
   }
 
-  .profile-pic {
-    width: 120px;
-    height: 120px;
+  footer {
+    font-size: 14px;
+    padding: 8px;
   }
 }
-
 
 
 
