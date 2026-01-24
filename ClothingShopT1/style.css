@@ -187,16 +187,19 @@ footer {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
- 
-  header { flex-direction: row; 
-    justify-content: center; 
-    align-items: center; 
-    text-align: center; } 
-    header .logo {
-       height: 80px; 
-       margin: 0 10px 0 0; 
-      } 
- 
+
+  header {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  header .logo {
+    height: 80px;
+    margin: 0 10px 0 0;
+  }
+
   .container {
     flex-direction: column;
   }
@@ -210,23 +213,20 @@ footer {
     margin: 5px 0;
   }
 
-  
   .products {
     justify-content: center;
   }
 
   .product {
-    width: calc(50% - 20px);
+    width: calc(50% - 20px); /* 2 items per row */
   }
 }
-
 @media (max-width: 480px) {
-  
+
   .product {
-    width: 100%;
+    width: 100%; /* 1 item per row */
   }
 
- 
   form {
     width: 90%;
     margin: 20px auto;
@@ -243,4 +243,3 @@ footer {
     height: 120px;
   }
 }
-
