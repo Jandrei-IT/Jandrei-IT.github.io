@@ -189,14 +189,13 @@ footer {
 
 
 /* Responsive adjustments */
-/* 📱 Mobile Devices */
 @media (max-width: 768px) {
 
   body {
     font-size: 16px;
   }
 
-  /* Header */
+  
   header {
     flex-direction: column;
     gap: 5px;
@@ -208,12 +207,12 @@ footer {
     margin: 0;
   }
 
-  /* Layout */
+  
   .container {
     flex-direction: column;
   }
 
-  /* Sidebar */
+  
   .sidebar {
     width: 100%;
     text-align: center;
@@ -228,37 +227,35 @@ footer {
     padding: 10px;
   }
 
-  /* Main content */
+  
   main {
     padding: 15px;
   }
 
-  /* Products grid */
+  
   .products {
     justify-content: center;
   }
 
   .product {
-    width: 100%;   /* one product per row */
+    width: 100%;  
   }
 
   .product img {
     height: 180px;
   }
 
-  /* Profile image */
+  
   .profile-pic {
     width: 150px;
     height: 150px;
   }
-
-  /* Forms */
+  
   form {
     width: 90%;
     margin: 30px auto;
   }
 
-  /* Buttons */
   button,
   .btn,
   .btn-logout {
@@ -271,6 +268,7 @@ footer {
     padding: 8px;
   }
 }
+
 
 
 
