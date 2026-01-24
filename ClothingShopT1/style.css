@@ -205,7 +205,7 @@ footer {
   }
 
   .sidebar {
-    width: 600px;
+    width: 100px;
     text-align: center;
   }
 
@@ -219,6 +219,10 @@ footer {
 
   .product {
     width: calc(50% - 20px);
+  }
+}
+ .container {
+    flex-direction: column;
   }
 }
 @media (max-width: 480px) {
@@ -243,6 +247,7 @@ footer {
     height: 120px;
   }
 }
+
 
 
 
