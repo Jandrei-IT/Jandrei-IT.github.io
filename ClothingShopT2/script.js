@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  // ===================== CONTACT FORM =====================
+  // ContactForm
   const contactForm = document.getElementById("contactForm");
   contactForm?.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     alert(`Name: ${name}\nMessage: ${message}`);
   });
 
-  // ===================== CART LOGIC =====================
+  // Cart
   const addToCartButtons = document.querySelectorAll(".btn");
   const cartTableBody = document.querySelector("tbody");
 
@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ===================== LOGIN FORM =====================
+  //Login
   const loginForm = document.getElementById("loginForm");
   loginForm?.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.location.href = "userprofile.html";
   });
 
-  // ===================== SIGNUP FORM =====================
+  // Signup
   const signupForm = document.getElementById("signupForm");
   signupForm?.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -153,7 +153,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.location.href = "login.html";
   });
 
-  // ===================== NAVIGATION LOGIC =====================
+  //Navigation
   const loginLink = document.getElementById("loginLink");
   const profileLink = document.getElementById("profileLink");
   const logoutLink = document.getElementById("logoutLink");
@@ -178,3 +178,4 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
+
