@@ -277,7 +277,7 @@ input[type="number"] {
 }
 
 .cart-summary {
-  text-align: right;
+  text-align: left;
   margin-top: 20px;
 }
 
@@ -364,22 +364,6 @@ input[type="number"] {
   font-weight: bold;
 }
 
-.confirm-btn {
-  margin-top: 10px;
-  padding: 14px 25px;
-  font-size: 16px;
-  border: none;
-  border-radius: 10px;
-  background: #000;
-  color: #fff;
-  cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease;
-}
-
-.confirm-btn:hover {
-  background: #333;
-  transform: translateY(-2px);
-}
 
 .confirm-btn {
   margin-top: 10px;
@@ -390,14 +374,13 @@ input[type="number"] {
   background: #000;
   color: #fff;
   cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease;
   text-decoration: none;
   display: inline-block; 
 }
 
 .confirm-btn:hover {
   background: #333;
-  transform: translateY(-2px);
+  transition: background-color 0.3s ease;
 }
 .receipt-container {
       background: #8b8b8b;
