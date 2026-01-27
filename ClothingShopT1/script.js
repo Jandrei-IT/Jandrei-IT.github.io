@@ -93,7 +93,26 @@ if (cartItems) {
     }
   });
 }
+  // Receipt Date
+  async function fetchDate() {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        const today = new Date();
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        resolve(today.toLocaleDateString('en-US', options));
+      }, 500);
+    });
+  }
 
+  async function displayDate() {
+    try {
+      const date = await fetchDate();
+      document.getElementById("receiptDate").textContent = date;
+    } catch (error) {
+      console.error("Error fetching date:", error);
+    }
+  }
+  displayDate();
 
   //LOGIN
   const loginForm = document.getElementById("loginForm");
@@ -183,4 +202,5 @@ if (cartItems) {
   });
 
 });
+
 
