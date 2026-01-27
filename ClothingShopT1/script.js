@@ -15,80 +15,84 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //CART
   const addToCartButtons = document.querySelectorAll(".btn");
-  const cartTableBody = document.querySelector("tbody");
+const cartItems = document.getElementById("cartItems"); // tbody ID
 
-  async function addToCart(item) {
-    await new Promise((resolve) => setTimeout(resolve, 200));
-    const cart = JSON.parse(localStorage.getItem("cart")) || [];
-    cart.push(item);
-    localStorage.setItem("cart", JSON.stringify(cart));
-  }
 
-  async function removeFromCart(name) {
-    await new Promise((resolve) => setTimeout(resolve, 200));
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
-    cart = cart.filter((item) => item.name !== name);
-    localStorage.setItem("cart", JSON.stringify(cart));
-  }
+async function addToCart(item) {
+  await new Promise((resolve) => setTimeout(resolve, 200));
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  cart.push(item);
+  localStorage.setItem("cart", JSON.stringify(cart));
+}
 
-  function createCartRow(item) {
-    const row = document.createElement("tr");
-    row.innerHTML = `
-      <td>
-        <img src="${item.image}" alt="${item.name}" class="cart-img">
-        <span>${item.name}</span>
-      </td>
-      <td>${item.price}</td>
-      <td><input type="number" value="1" min="1"></td>
-      <td>${item.price}</td>
-      <td><button class="remove-btn">✖</button></td>
-    `;
-    return row;
-  }
 
-  addToCartButtons.forEach((button) => {
-    button.addEventListener("click", async (e) => {
-      e.preventDefault();
-      const productCard = button.closest(".product");
-      if (!productCard) return;
+async function removeFromCart(name) {
+  await new Promise((resolve) => setTimeout(resolve, 200));
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  cart = cart.filter((item) => item.name !== name);
+  localStorage.setItem("cart", JSON.stringify(cart));
+}
 
-      const productName = productCard.querySelector("p")?.innerText || "";
-      const productPrice = productCard.querySelector(".price")?.innerText || "";
-      const productImage = productCard.querySelector("img")?.getAttribute("src") || "";
 
-      if (!productName || !productPrice) return;
+function createCartRow(item) {
+  const row = document.createElement("tr");
+  row.innerHTML = `
+    <td>
+      <img src="${item.image}" alt="${item.name}" class="cart-img">
+      <span>${item.name}</span>
+    </td>
+    <td>${item.price}</td>
+    <td><input type="number" value="1" min="1"></td>
+    <td>${item.price}</td>
+    <td><button class="remove-btn">✖</button></td>
+  `;
+  return row;
+}
 
-      try {
-        await addToCart({ name: productName, price: productPrice, image: productImage });
-        alert(`${productName} added to cart!`);
-        if (cartTableBody) {
-          const row = createCartRow({ name: productName, price: productPrice, image: productImage });
-          cartTableBody.appendChild(row);
-        }
-      } catch (err) {
-        console.error(err);
-        alert("Failed to add item to cart.");
-      }
+
+addToCartButtons.forEach((button) => {
+  button.addEventListener("click", async (e) => {
+    e.preventDefault();
+
+    const productCard = button.closest(".product");
+    if (!productCard) return;
+
+    const productName = productCard.querySelector("p")?.innerText || "";
+    const productPrice = productCard.querySelector(".price")?.innerText || "";
+    const productImage = productCard.querySelector("img")?.getAttribute("src") || "";
+
+    if (!productName || !productPrice) return;
+
+    await addToCart({
+      name: productName,
+      price: productPrice,
+      image: productImage
     });
+
+    alert(`${productName} added to cart!`);
+  });
+});
+
+
+if (cartItems) {
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  cart.forEach(item => {
+    const row = createCartRow(item);
+    cartItems.appendChild(row);
   });
 
-  if (cartTableBody) {
-    const cart = JSON.parse(localStorage.getItem("cart")) || [];
-    cart.forEach((item) => {
-      const row = createCartRow(item);
-      cartTableBody.appendChild(row);
-    });
+  
+  cartItems.addEventListener("click", async (e) => {
+    if (e.target.classList.contains("remove-btn")) {
+      const row = e.target.closest("tr");
+      const name = row.querySelector("span").innerText;
 
-    cartTableBody.addEventListener("click", async (e) => {
-      if (e.target.classList.contains("remove-btn")) {
-        const row = e.target.closest("tr");
-        const name = row.querySelector("span")?.innerText;
-        if (!name) return;
-        await removeFromCart(name);
-        row.remove();
-      }
-    });
-  }
+      await removeFromCart(name);
+      row.remove();
+    }
+  });
+}
 
   //LOGIN
   const loginForm = document.getElementById("loginForm");
@@ -178,3 +182,4 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
+
