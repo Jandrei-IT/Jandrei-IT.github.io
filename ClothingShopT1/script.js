@@ -94,37 +94,6 @@ if (cartItems) {
   });
 }
 
-const receiptItems = document.getElementById("receiptItems");
-const receiptTotal = document.getElementById("receiptTotal");
-
-function parsePrice(price) {
-  return Number(price.replace("₱", ""));
-}
-
-if (receiptItems) {
-  const cart = JSON.parse(localStorage.getItem("cart")) || [];
-  let total = 0;
-
-  receiptItems.innerHTML = "";
-
-  cart.forEach(item => {
-    const qty = item.quantity || 1;
-    const price = parsePrice(item.price);
-    const rowTotal = price * qty;
-    total += rowTotal;
-
-    const row = document.createElement("tr");
-    row.innerHTML = `
-      <td>${item.name}</td>
-      <td>${qty}</td>
-      <td>₱${rowTotal}</td>
-    `;
-
-    receiptItems.appendChild(row);
-  });
-
-  receiptTotal.innerText = `₱${total}`;
-}
 
   //LOGIN
   const loginForm = document.getElementById("loginForm");
@@ -214,3 +183,4 @@ if (receiptItems) {
   });
 
 });
+
