@@ -34,7 +34,8 @@ console.log('✅ Files copied successfully');
 console.log('Committing and pushing to main...');
 try {
   execSync('git add .', { stdio: 'inherit' });
-  execSync('git commit -m "Build: Deploy React app to jalabarentoclothingshop"', { stdio: 'inherit' });
+  // Always create a commit, even if nothing changed
+  execSync('git commit --allow-empty -m "Build: Deploy React app to jalabarentoclothingshop"', { stdio: 'inherit' });
   execSync('git push', { stdio: 'inherit' });
   console.log('Deployment to main branch successful!');
 } catch (err) {
