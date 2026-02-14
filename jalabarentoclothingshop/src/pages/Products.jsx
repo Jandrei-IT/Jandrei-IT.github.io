@@ -40,7 +40,7 @@ const Products = () => {
           <h3 id="top" className="product-label">Top</h3>
           <section className="products">
             <article className="product">
-              <img src="/product1.png" alt="White Shirt" />
+              <img src="product1.png" alt="White Shirt" />
               <p>White Shirt</p>
               <p className="price">₱700</p>
               <button className="btn" onClick={() => addToCart({ name: "White Shirt", price: "₱700", image: "/product1.png" })}>
@@ -49,7 +49,7 @@ const Products = () => {
             </article>
 
             <article className="product">
-              <img src="/product2.png" alt="Black Shirt" />
+              <img src="product2.png" alt="Black Shirt" />
               <p>Black Shirt</p>
               <p className="price">₱500</p>
               <button className="btn" onClick={() => addToCart({ name: "Black Shirt", price: "₱500", image: "/product2.png" })}>
@@ -58,7 +58,7 @@ const Products = () => {
             </article>
 
             <article className="product">
-              <img src="/product4.png" alt="Sweat Shirt" />
+              <img src="product4.png" alt="Sweat Shirt" />
               <p>Sweat Shirt</p>
               <p className="price">₱650</p>
               <button className="btn" onClick={() => addToCart({ name: "Sweat Shirt", price: "₱650", image: "/product4.png" })}>
@@ -71,7 +71,7 @@ const Products = () => {
           <h3 id="bottom" className="product-label">Bottom</h3>
           <section className="products">
             <article className="product">
-              <img src="/product3.png" alt="Sweat Pants" />
+              <img src="product3.png" alt="Sweat Pants" />
               <p>Sweat Pants</p>
               <p className="price">₱400</p>
               <button className="btn" onClick={() => addToCart({ name: "Sweat Pants", price: "₱400", image: "/product3.png" })}>
@@ -84,7 +84,7 @@ const Products = () => {
           <h3 id="cap" className="product-label">Cap</h3>
           <section className="products">
             <article className="product">
-              <img src="/product6a.png" alt="Beanie" />
+              <img src="product6a.png" alt="Beanie" />
               <p>Beanie</p>
               <p className="price">₱550</p>
               <button className="btn" onClick={() => addToCart({ name: "Beanie", price: "₱550", image: "/product6a.png" })}>
@@ -93,7 +93,7 @@ const Products = () => {
             </article>
 
             <article className="product">
-              <img src="/product7.png" alt="Black Cap" />
+              <img src="product7.png" alt="Black Cap" />
               <p>Black Cap</p>
               <p className="price">₱600</p>
               <button className="btn" onClick={() => addToCart({ name: "Black Cap", price: "₱600", image: "/product7.png" })}>
@@ -102,7 +102,7 @@ const Products = () => {
             </article>
 
             <article className="product">
-              <img src="/product8.png" alt="White Cap" />
+              <img src="product8.png" alt="White Cap" />
               <p>White Cap</p>
               <p className="price">₱600</p>
               <button className="btn" onClick={() => addToCart({ name: "White Cap", price: "₱600", image: "/product8.png" })}>

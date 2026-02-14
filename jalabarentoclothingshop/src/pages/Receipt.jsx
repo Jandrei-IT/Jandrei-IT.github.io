@@ -58,7 +58,7 @@ const Receipt = () => {
         const row = document.createElement("tr");
         row.innerHTML = `
           <td>
-            <img src="${item.image}" class="cart-img">
+            <img src="${item.image.replace(/^\//, '')}" class="cart-img">
             ${item.name}
           </td>
           <td>${item.qty}</td>

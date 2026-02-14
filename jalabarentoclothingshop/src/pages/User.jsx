@@ -22,7 +22,7 @@ const UserProfile = () => {
         <main className="user-main-content">
           <div className="user-card">
             <h2 className="user-heading">User Profile</h2>
-            <img src="/user.png" alt="User Profile Pic" className="user-profile-img" />
+            <img src="user.png" alt="User Profile Pic" className="user-profile-img" />
             <p>First Name: Juan</p>
             <p>Last Name: Dela Cruz</p>
             <p>Email Address: juandelacruz@example.com</p>
