@@ -3,7 +3,8 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 const distDir = path.join(__dirname, 'dist');
-const targetDir = path.join(__dirname);
+const deployDir = path.join(__dirname, 'jalabarentoclothingshop-build');
+
 
 function copyRecursiveSync(src, dest) {
   const exists = fs.existsSync(src);
@@ -19,8 +20,11 @@ function copyRecursiveSync(src, dest) {
   }
 }
 
-console.log('Copying dist files to jalabarentoclothingshop folder...');
-copyRecursiveSync(distDir, targetDir);
+console.log('Copying dist files to jalabarentoclothingshop-build folder...');
+if (fs.existsSync(deployDir)) {
+  fs.rmSync(deployDir, { recursive: true, force: true });
+}
+copyRecursiveSync(distDir, deployDir);
 console.log('✅ Files copied successfully');
 
 console.log('Committing and pushing to main...');
