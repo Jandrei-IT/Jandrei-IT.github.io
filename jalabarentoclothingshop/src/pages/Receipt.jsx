@@ -20,12 +20,8 @@ const Receipt = () => {
       });
     }
     async function displayDate() {
-      try {
-        const d = await fetchDate();
-        setDate(d);
-      } catch (error) {
-        setDate('Error');
-      }
+      const d = await fetchDate();
+      setDate(d);
     }
     displayDate();
 
