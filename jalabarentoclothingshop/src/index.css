@@ -1,0 +1,28 @@
+:root {
+  --primary: #1e40af;
+  --accent: #f59e0b;
+  --bg-main: #b5c9d1;
+  --text-dark: #1f2937;
+  --radius: 8px;
+  --font-family: 'Libre Baskerville', serif;
+}
+
+*{
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-main);
+  color: var(--text-dark);
+  line-height: 1.5;
+  padding-top: 130px; 
+  padding-bottom: 80px; 
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

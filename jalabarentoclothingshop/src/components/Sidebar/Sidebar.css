@@ -1,0 +1,65 @@
+/* Keep your existing styles */
+.sidebar {
+  width: 210px;
+  font-family: 'Libre Baskerville', serif;;
+  background: #A9A9A9;
+  padding: 15px;
+  position: fixed;
+  top: 130px;
+  left: 0;
+  height: calc(100% - 130px);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+/* NEW: Styles for the internal structure */
+
+.sidebar-header {
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.sidebar-nav {
+  flex: 1; 
+}
+
+.sidebar-footer {
+  padding-top: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  margin-top: auto; 
+  font-size: 0.85rem;
+  color: #555;
+}
+
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  margin: 10px 0;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #333;
+  display: block;              
+  padding: 8px 12px;           
+  border-radius: 4px;         
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.sidebar ul li a:hover {
+  background-color: #25343f;      
+  color: #ffffff;
+  transform: translateX(5px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
