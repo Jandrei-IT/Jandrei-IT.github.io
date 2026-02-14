@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feat - Receipt</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Feat Clothing company logo" class="logo">
+    <h1>Feat Clothing</h1>
+  </header>
+
+  <div class="container">
+    <nav class="sidebar" aria-label="Main Navigation">
+      <ul id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="Products.html">Products</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li id="loginLink"><a href="login.html">Log in</a></li>
+        <li id="profileLink" style="display:none;"><a href="userprofile.html">Profile</a></li>
+        <li id="logoutLink" style="display:none;"><a href="#" id="logoutBtn">Logout</a></li>
+        
+      </ul>
+    </nav>
+
+    <main>
+      <div class="receipt-container">
+    <div class="receipt-header">
+      <h1>Transaction Confirmed</h1>
+      <p>Thank you for your purchase!</p>
+    </div>
+
+    <div class="receipt-details">
+      <p><strong>Order Number:</strong> #123456</p>
+      <p><strong>Date:</strong> January 26, 2026</p>
+      <p><strong>Payment Method:</strong> Cash on delivery</p>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Qty</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>White Shirt</td>
+          <td>1</td>
+          <td>₱700</td>
+        </tr>
+        <tr>
+          <td>Sweat Pants</td>
+          <td>2</td>
+          <td>₱800</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p class="total">Total: ₱1,560</p>
+
+    <div class="receipt-footer">
+      <p>This receipt serves as proof of your transaction.</p>
+      <a href="index.html" class="btn-back">Back to Home</a>
+    </div>
+  </div>
+
+    </main>
+  </div>
+  <footer>
+    <p>&copy; 2026 Feat Clothing</p>
+    <p>Contact: FeatClothing@gmail.com</p>
+  </footer>
+<script src="script.js"></script>
+</body>
+</html>
+
